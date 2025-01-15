@@ -1,6 +1,6 @@
 Temperature is a measure of the average heat or thermal energy of the particles in a substance. Since it is an average measurement, it does not depend on the number of particles in an object. In that sense it does not depend on the size of it. For example, the temperature of a small cup of boiling water is the same as the temperature of a large pot of boiling water. Even if the large pot is much bigger than the cup and has millions and millions more water molecules. The basic unit of temperature (T) in the International System of Units (SI) is the Kelvin (K). The commonly used other units of temperature are Degree Celsius (°C) and Degree Fahrenheit (°F).
 
-## Electrical Resistance
+#### Electrical Resistance
 
 The electrical resistance of an object is a measure of its opposition to the flow of an electric current. For a wide range of materials and conditions, the electrical resistance does not depend on the amount of current through or the potential difference (voltage) across the object. That means the resistance R is constants for the given temperature and material. Therefore, the resistance of an object can be defined as the ratio of voltage to current, in accordance with Ohm’s Law: 
 
@@ -8,7 +8,7 @@ R = V/I
 
 The unit of resistance is ohm (Ω).
 
-## Resistance Temperature Detector (RTD)
+### Resistance Temperature Detector (RTD)
 
 For measurement of Temperature number of sensors are available. One of the most linear, stable, and reproducible temperature sensors is the RTD, Resistance Temperature Detector. In RTD, the output resistance changes with temperature. RTD is a positive temperature coefficient device. The resistance of the metal increases with temperature. The resistive property of the metal is called its resistivity. The resistive property defines length and cross sectional area required to fabricate an RTD of a given value. The resistance is proportional to length and inversely proportional to the cross sectional area and is given by the relationship. 
 
@@ -18,11 +18,11 @@ R = ρl/A
 
 ![ *Temp_1*](images/Temp_1.jpg)
 
-### RTD
+#### RTD
 
 Resistance Temperature Detector (RTD), as the name implies, is a sensor used to measure temperature by correlating the resistance with temperature. Most RTD elements consist of a length of fine coiled wire wrapped around a ceramic or glass core. The element is usually quite fragile, so it is often placed inside a sheathed probe to protect it. The RTD element is made from pure metals as mentioned below. The material property to have predictable change in resistance as the temperature changes is used to determine temperature.
 
-### Commonly used RTD Materials
+#### Commonly used RTD Materials
 
 -	Platinum (most popular and accurate) 
 -	Nickel 
@@ -30,19 +30,19 @@ Resistance Temperature Detector (RTD), as the name implies, is a sensor used to 
 -	Balco (rare) 
 -	Tungsten (rare)
 
-### Thermowells 
+#### Thermowells 
 
 Thermowells are used to protect temperature probes installed in industrial processes. Thermowells are described as a closed-end tube designed to protect temperature sensors from harsh environments, high pressure and flow. Thermowells provide threads or a flange for mounting to the process or vessel. They can be installed into a system by pipe thread of welded flange. Typically thermowells are made of a corrosion-resistant metal and can be customized based on the application. 
 The temperature sensor probe is inserted at the open end of the thermowell tube. Within the process fluid transfers heat to the thermowell wall, the heat is then transferred to the temperature sensor. With the additional mass of the thermowell, the response time of the sensors can be delayed. However, thermowells allow for easy replacement of a failed temperature sensor.
 
-### Materials used for Thermowells
+#### Materials used for Thermowells
 
 -	Carbon Steel. 
 -	Stainless steel SS304,SS316 etc 
 -	Monel 
 -	Brass 
 
-### Types of Thermowells 
+#### Types of Thermowells 
 
 -	Threaded thermowells. 
 -	Flanged thermowells -- includes raised face, flat face, and ring joint (RJT) flanged thermowell constructions. 
@@ -52,10 +52,10 @@ The temperature sensor probe is inserted at the open end of the thermowell tube.
 -	Sanitary Cap Thermowells (3-A Certified) 
 -	Sanitary Weld-In Thermowells (3-A Certified) 
 
-### Thermocouple 
+#### Thermocouple 
 
 - In 1821, Thomas Seebeck discovered if metals of two different materials were joined at both ends and one end was at a different temperature than the other, a current was created. This phenomenon is known as the Seebeck effect and is the basis for all thermocouples. 
-- 
+
 ![ *Temp_2*](images/Temp_2.jpg)
 
 -	A thermocouple is a type of temperature sensor, which is made by joining two dissimilar metals at one end. The joined end is referred to as the HOT JUNCTION.The other end of these dissimilar metals is referred to as the COLD END or COLD JUNCTION. The cold junction is actually formed at the last point of thermocouple material.
@@ -73,7 +73,7 @@ The temperature sensor probe is inserted at the open end of the thermowell tube.
 
 -	To establish a means to measure temperature with thermocouples, a standard scale of millivolt outputs was established. This scale was established using 32 deg. F (0°C) as the standard cold junction temperature (32 deg. F (0°C) = 0 millivolts output). 
 
-### COLD JUNCTION COMPENSATION
+#### COLD JUNCTION COMPENSATION
 
 -	As we mentioned earlier, the last point of thermocouple material is known as the cold junction. The amount of output the t/c produces is determined by the difference between the hot junction and the cold junction temperatures. The cold junction temperature must be known to accurately determine the temperature. 
 
@@ -107,7 +107,7 @@ The temperature sensor probe is inserted at the open end of the thermowell tube.
 
 ![ *Temp_4*](images/Temp_4.jpg)
 
-### Temperature Sensor Plant
+#### Temperature Sensor Plant
 
 ![ *Temp_5*](images/Temp_5.jpg)
 
@@ -121,6 +121,6 @@ The temperature sensor probe is inserted at the open end of the thermowell tube.
 
 ![ *Temp_6*](images/Temp_6.jpg)
 
-### P & ID of Temperature sensor Plant – 
+#### P & ID of Temperature sensor Plant – 
 
 ![ *Temp_7*](images/Temp_7.jpg)
