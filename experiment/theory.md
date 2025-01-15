@@ -16,7 +16,7 @@ R = ρl/A
 
  Where 'R' is resistance of the metal, 'ρ' is the resistivity of the metal, 'l' is the length of the metal and 'A' is the area of cross section of the metal.
 
-![ *Temp_1*](images/Temp_1.png)
+![ *Temp_1*](images/Temp_1.jpg)
 
 ### RTD
 
@@ -56,11 +56,11 @@ The temperature sensor probe is inserted at the open end of the thermowell tube.
 
 - In 1821, Thomas Seebeck discovered if metals of two different materials were joined at both ends and one end was at a different temperature than the other, a current was created. This phenomenon is known as the Seebeck effect and is the basis for all thermocouples. 
 - 
-![ *Temp_2*](images/Temp_2.png)
+![ *Temp_2*](images/Temp_2.jpg)
 
 -	A thermocouple is a type of temperature sensor, which is made by joining two dissimilar metals at one end. The joined end is referred to as the HOT JUNCTION.The other end of these dissimilar metals is referred to as the COLD END or COLD JUNCTION. The cold junction is actually formed at the last point of thermocouple material.
 
-![ *Temp_3*](images/Temp_3.png)
+![ *Temp_3*](images/Temp_3.jpg)
 
 -	Certain combinations of metals must be used to make up the thermocouple pairs. 
 
@@ -105,11 +105,11 @@ The temperature sensor probe is inserted at the open end of the thermowell tube.
 
 -	It is also acceptable to have a third metal in the hot junction as long as that metal is at the same temperature as the thermocouple material. 
 
-![ *Temp_4*](images/Temp_4.png)
+![ *Temp_4*](images/Temp_4.jpg)
 
 ### Temperature Sensor Plant
 
-![ *Temp_5*](images/Temp_5.png)
+![ *Temp_5*](images/Temp_5.jpg)
 
 #### Major Hardware: - 
 
@@ -119,8 +119,8 @@ The temperature sensor probe is inserted at the open end of the thermowell tube.
 -	Thermocouple: - K Type (5 nos.) 
 -	Master Reference temperature sensor: - K Type. 
 
-![ *Temp_6*](images/Temp_6.png)
+![ *Temp_6*](images/Temp_6.jpg)
 
 ### P & ID of Temperature sensor Plant – 
 
-![ *Temp_7*](images/Temp_7.png)
+![ *Temp_7*](images/Temp_7.jpg)
