@@ -15,7 +15,7 @@ function TemperatureSensorMimic(){
 		+'<button id="startBtn" class="btn btn-danger" style="width:100%" data-toggle="modal" data-target="#myModal1" disabled>Start</button>'
 		+'</div>'
 		+'<div class="col-sm-6">'
-		+'<button id="reset" class="btn btn-danger" style="width:100%" disabled >Reset</button>'
+//		+'<button id="reset" class="btn btn-danger" style="width:100%" disabled >Reset</button>'
 		+'</div>'
 		+'</div>'
 		+'<div class="row">'
@@ -23,116 +23,133 @@ function TemperatureSensorMimic(){
 		+'<button id="datasheet" class="btn btn-danger" style="width:100%;margin-top:10px;" disabled>View Datasheet</button>'
 		+'</div>'
 		+'<div class="col-sm-6">'
-		+'<button type="button" class="btn btn-danger"  id="graph" style="margin-top:10px;width:100%" data-toggle="modal" data-target="#modalTrends"  >Trends </button>'
+		+'<button type="button" class="btn btn-danger"  id="graph" style="margin-top:10px;width:100%" data-toggle="modal" data-target="#modalTrends"  disabled>Trends </button>'
 		+'</div>'
 		+'</div>'
 		+'<div class="row conf" >'
+		
 		+'<div class="row">'
 		+'<div class="col-sm-6">'
-		+'<label><b>Flow Transmitter (FT) :</b></label>'
+		+'<label><b>TT1</b></label>'
+		+'</div>'		
+		+'<div class="col-sm-3">'
+		+'<label id="tt1Value">20.00</label>'
+		+'</div>'		
+		+'<div class="col-sm-3">'
+		+'<label><b><center>°C</center></b></label>'
+		+'</div>'
 		+'</div>'
 		
-		+'<div class="col-sm-3">'
-		+'<label class="PMCValue">12.00</label>'
-		+'</div>'
-		
-		+'<div class="col-sm-3">'
-		+'<label><b><center>m/s</center></b></label>'
-		+'</div>'
-		+'</div>'
 		+'<div class="row">'
 		+'<div class="col-sm-6">'
-		+'<label><b>Hot Air Temperature (TT01) :</b></label>'
-		+'</div>'
-		
+		+'<label><b>TT2</b></label>'
+		+'</div>'		
 		+'<div class="col-sm-3">'
-		+'<label class="PMCValue">38.70</label>'
-		+'</div>'
-		
+		+'<label id="tt2Value">20.00</label>'
+		+'</div>'		
 		+'<div class="col-sm-3">'
 		+'<label><b>°C</b></label>'
 		+'</div>'
 		+'</div>'
+		
 		+'<div class="row">'
 		+'<div class="col-sm-6">'
-		+'<label><b>Product Temperature (TT02) :</b></label>'
-		+'</div>'
-		
+		+'<label><b>TT3</b></label>'
+		+'</div>'		
 		+'<div class="col-sm-3">'
-		+'<label class="PMCValue"> 38.10 </label>'
-		+'</div>'
-		
+		+'<label id="tt3Value"> 20.00 </label>'
+		+'</div>'		
 		+'<div class="col-sm-3">'
 		+'<label><b>°C</b></label>'
 		+'</div>'
 		+'</div>'
-		+'<div class="row">'
-		+'<div class="col-sm-6">'
-		+'<label><b>Vacuum Transmitter (NT): </b></label>'
-		+'</div>'
-		
-		+'<div class="col-sm-3">'
-		+'<label class="PMCValue">0.99 </label>'
-		+'</div>'
-		
-		+'<div class="col-sm-3">'
-		+'<label><b>abs bar</b></label>'
-		+'</div>'
-		+'</div>'
 		
 		+'<div class="row">'
 		+'<div class="col-sm-6">'
-		+'<label><b>Heater firing: </b></label>'
+		+'<label><b>TT4 </b></label>'
+		+'</div>'		
+		+'<div class="col-sm-3">'
+		+'<label id="tt4Value">20.00 </label>'
+		+'</div>'		
+		+'<div class="col-sm-3">'
+		+'<label><b>°C</b></label>'
+		+'</div>'
 		+'</div>'
 		
-		+'<div class="col-sm-3">'
-		+'<label class="PMCValue">-24.91 </label>'
-		+'</div>'
-		
-		+'<div class="col-sm-3">'
-		+'<label><b>%</b></label>'
-		+'</div>'
-		+'</div>'
 		+'<div class="row">'
 		+'<div class="col-sm-6">'
-		+'<label><b>Peristaltic Pump :</b></label>'
+		+'<label><b>TT5 </b></label>'
+		+'</div>'		
+		+'<div class="col-sm-3">'
+		+'<label id="tt5Value">20.00 </label>'
+		+'</div>'		
+		+'<div class="col-sm-3">'
+		+'<label><b>°C</b></label>'
+		+'</div>'
 		+'</div>'
 		
-		+'<div class="col-sm-3">'
-		+'<label class="PMCValue">00.00 </label>'
-		+'</div>'
-		
-		+'<div class="col-sm-3">'
-		+'<label><b>%</b></label>'
-		+'</div>'
-		+'</div>'
 		+'<div class="row">'
 		+'<div class="col-sm-6">'
-		+'<label><b>FD Fan :</b></label>'
+		+'<label><b>TT6</b></label>'
+		+'</div>'		
+		+'<div class="col-sm-3">'
+		+'<label id="tt6Value">20.00</label>'
+		+'</div>'		
+		+'<div class="col-sm-3">'
+		+'<label><b>°C</b></label>'
+		+'</div>'
 		+'</div>'
 		
-		+'<div class="col-sm-3">'
-		+'<label class="PMCValue">25.00 </label>'
-		+'</div>'
-		
-		+'<div class="col-sm-3">'
-		+'<label><b>%</b></label>'
-		+'</div>'
-		+'</div>'
 		+'<div class="row">'
 		+'<div class="col-sm-6">'
-		+'<label><b>ID Fan : </b></label>'
+		+'<label><b>TT7</b></label>'
+		+'</div>'		
+		+'<div class="col-sm-3">'
+		+'<label id="tt7Value">20.00 </label>'
+		+'</div>'		
+		+'<div class="col-sm-3">'
+		+'<label><b>°C</b></label>'
+		+'</div>'
 		+'</div>'
 		
+		+'<div class="row">'
+		+'<div class="col-sm-6">'
+		+'<label><b>TT8</b></label>'
+		+'</div>'		
 		+'<div class="col-sm-3">'
-		+'<label class="PMCValue">-24.90 </label>'
+		+'<label id="tt8Value">20.00 </label>'
+		+'</div>'		
+		+'<div class="col-sm-3">'
+		+'<label><b>°C</b></label>'
+		+'</div>'
 		+'</div>'
 		
+		+'<div class="row">'
+		+'<div class="col-sm-6">'
+		+'<label><b>PT1</b></label>'
+		+'</div>'		
 		+'<div class="col-sm-3">'
-		+'<label><b>%</b></label>'
+		+'<label id="pt1Value">0.00</label>'
+		+'</div>'		
+		+'<div class="col-sm-3">'
+		+'<label><b>Bar</b></label>'
 		+'</div>'
 		+'</div>'
+		
+		+'<div class="row">'
+		+'<div class="col-sm-6">'
+		+'<label><b>PT2</b></label>'
+		+'</div>'		
+		+'<div class="col-sm-3">'
+		+'<label id="pt2Value">0.00 </label>'
+		+'</div>'		
+		+'<div class="col-sm-3">'
+		+'<label><b>Bar</b></label>'
 		+'</div>'
+		+'</div>'
+		
+		+'</div>'
+		
 		+'<div class="col-sm-12">'
 		+'<button type="button" class="btn btn-danger"  id="BoilerHeatExchangerPost" style="margin-top:10px;width:100%" >Next level </button>'
 		+'</div>'
@@ -356,6 +373,17 @@ var h = 700;
 		tt7Text.attr("text", "20.00");
 		tt8Text.attr("text", "20.00");
 		
+		$("#tt1Value").text("20.00");
+		$("#tt2Value").text("20.00");
+		$("#tt3Value").text("20.00");
+		$("#tt4Value").text("20.00");
+		$("#tt5Value").text("20.00");
+		$("#tt6Value").text("20.00");
+		$("#tt7Value").text("20.00");
+		$("#tt8Value").text("20.00");
+		$("#pt1Value").text("0.00");
+		$("#pt2Value").text("0.00");
+		
 		$("#startBtn").prop("disabled", false);
 		
 	}, 2000);
@@ -363,10 +391,12 @@ var h = 700;
 	let activeTimeouts = [];
 	
 	
-	$("#startBtn").on("click", function (e) {
+	$("#startBtn").on("click", function () {
 		a = [];
 		data = {};
-
+		
+		$("#datasheet").prop("disabled", true);
+		$("#graph").prop("disabled", true);
 		sensorSet.animate({ transform: "T0,85"}, time*4, "ease-in-out");
 		stOff.toFront();
 		rnOn.toFront();
@@ -404,14 +434,16 @@ var h = 700;
 				for(var n = 0; n < 12; n++){
 					activeTimeouts.push(setTimeout(() =>{
 						var tmp = parseFloat(tt7Text.attr("text")) + 5;
-						tt7Text.attr("text", tmp);
+						tt7Text.attr("text", tmp + '.00');
+						$("#tt7Value").text(tmp+ '.00');
 					}, n*700))
 				}
 			}else if(temp =="hot"){
 				for(var n = 0; n < 39; n++){
 					activeTimeouts.push(setTimeout(() =>{
 						var tmp = parseFloat(tt8Text.attr("text")) - 20;
-						tt8Text.attr("text", tmp);
+						tt8Text.attr("text", tmp+ '.00');
+						$("#tt8Value").text(tmp+ '.00');
 					}, n*500))
 				}
 			}
@@ -463,6 +495,18 @@ var h = 700;
 					tt5Text.attr('text',ks.toFixed(2));
 					tt6Text.attr('text',kt.toFixed(2));
 					tt7Text.attr('text',pstd.toFixed(2));
+								
+					$("#tt1Value").text(ptb.toFixed(2));
+					$("#tt2Value").text(pts.toFixed(2));
+					$("#tt3Value").text(ptt.toFixed(2));
+					$("#tt4Value").text(kb.toFixed(2));
+					$("#tt5Value").text(ks.toFixed(2));
+					$("#tt6Value").text(kt.toFixed(2));
+					$("#tt7Value").text(pstd.toFixed(2));
+					$("#tt8Value").text("20.00");
+					$("#pt1Value").text("0.2");
+					$("#pt2Value").text("0.1");
+					
 					
 					round.tt1 = ptb.toFixed(2);
 					round.tt2 = pts.toFixed(2);
@@ -496,7 +540,19 @@ var h = 700;
 							tt3Text.attr("text", "20.00");
 							tt4Text.attr("text", "20.00");
 							tt5Text.attr("text", "20.00");
-							tt6Text.attr("text", "20.00");	
+							tt6Text.attr("text", "20.00");
+							
+							
+							$("#tt1Value").text("20.00");
+							$("#tt2Value").text("20.00");
+							$("#tt3Value").text("20.00");
+							$("#tt4Value").text("20.00");
+							$("#tt5Value").text("20.00");
+							$("#tt6Value").text("20.00");
+//							$("#tt7Value").text("20.00");
+//							$("#tt8Value").text("20.00");
+							$("#pt1Value").text("0.00");
+							$("#pt2Value").text("0.00");	
 							
 							roomTempCounter("cold");				
 							sensorSet.animate({ transform: "T0,0"}, time*4, function(){
@@ -582,7 +638,17 @@ var h = 700;
 					tt5Text.attr('text',ks.toFixed(2));
 					tt6Text.attr('text',kt.toFixed(2));
 					tt8Text.attr('text',pstd.toFixed(2));
-					
+								
+					$("#tt1Value").text(ptb.toFixed(2));
+					$("#tt2Value").text(pts.toFixed(2));
+					$("#tt3Value").text(ptt.toFixed(2));
+					$("#tt4Value").text(kb.toFixed(2));
+					$("#tt5Value").text(ks.toFixed(2));
+					$("#tt6Value").text(kt.toFixed(2));
+					$("#tt7Value").text("20.00");
+					$("#tt8Value").text(pstd.toFixed(2));
+					$("#pt1Value").text("0.2");
+					$("#pt2Value").text("0.1");
 					
 					round.tt1 = ptb.toFixed(2);
 					round.tt2 = pts.toFixed(2);
@@ -614,6 +680,21 @@ var h = 700;
 							tt5Text.attr("text", "20.00");
 							tt6Text.attr("text", "20.00");
 //							tt8Text.attr("text", "20.00");
+					
+												
+							$("#tt1Value").text("20.00");
+							$("#tt2Value").text("20.00");
+							$("#tt3Value").text("20.00");
+							$("#tt4Value").text("20.00");
+							$("#tt5Value").text("20.00");
+							$("#tt6Value").text("20.00");
+//							$("#tt7Value").text("20.00");
+//							$("#tt8Value").text("20.00");
+							$("#pt1Value").text("0.00");
+							$("#pt2Value").text("0.00");
+
+							$("#datasheet").prop("disabled", false);
+							$("#graph").prop("disabled", false);
 						}, 16000)));
 						sensorSet.animate({ transform: "T500,0"}, time*4);
 						dataArr.push(data);
