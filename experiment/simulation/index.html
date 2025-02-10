@@ -18,14 +18,31 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
   
+<!--<link rel="stylesheet" href="css/header.css">-->
+<!--<link rel="stylesheet" href="css/style.css">-->
+<!--<link rel="stylesheet" href="css/question.css">-->
+<!--<link rel="stylesheet" href="css/toastr.min.css">-->
+<!--<link rel="stylesheet" href="css/pageStyle.css">-->
+<!--<link rel="stylesheet" href="css/flowsensor.css">-->
+<!--<link rel="stylesheet" href="css/result.css">-->
+
+
 <link rel="stylesheet" href="css/header.css">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/toastr.min.css">
 <link rel="stylesheet" href="css/question.css">
 <link rel="stylesheet" href="css/pageStyle.css">
+<link rel="stylesheet" href="css/dryer.css">
+<link rel="stylesheet" href="css/result.css">
+
 <style>
 
 #coepLogo,#vlabLogo{
  pointer-events: none;
+}
+@font-face{
+ font-family:'digital-clock-font';
+ src: url('font/digital-7.ttf');
 }
 </style>
 <body >
@@ -39,11 +56,12 @@
 	<div  class="col-sm-12 " > 
 	</div>
 	</div>
-	<div  class="row container-fluid" id="buttonDiv" hidden>	
+	<div  class="row container-fluid" id="buttonDiv">	
 		<div  class="col-sm-12" > 
-<!-- 			<button type="button" id="saveAsJpg" class="btn btn-danger btn1" data-dismiss="modal" data-target="#problemstr"><b>Problem statement</b></button>	 -->
+ 			<h5 id="counter" class=" btn1 timerStyle">00:00:00</h5>
+			<button type="button" id="tagDetails" class="btn btn-danger btn1" data-toggle="modal" data-target="#tagDetail"><b>Tag details</b> </button>
 	        <button type="button" id="simDemo" class="btn btn-danger btn1" data-toggle="modal" data-target="#proStr"><b>Problem statement</b> </button>
-<!-- 		    <button type="button" id="btnForModal" class="btn btn-danger btn1 button1" data-toggle="modal" data-target="#myModal1"><b>Procedure </b></button> -->
+            <button type="button" id="procedure" class="btn btn-danger btn1" data-toggle="modal" data-target="#procedure1"><b>Procedure</b> </button>
 	     </div>
 	     
 	   
@@ -54,7 +72,7 @@
 			      <div class="modal-content">
 <!-- 		        Modal Header -->
 			        <div class="modal-header">
-		          <h4 class="modal-title"><center>PROBLEM STATEMENT</center></h4>
+<!--		          <h4 class="modal-title"><center>PROBLEM STATEMENT</center></h4>-->
 			          <button type="button" class="close" data-dismiss="modal">&times;</button>
 			        </div>
 <!-- 		        Modal body -->
@@ -69,6 +87,51 @@
 			    </div>
 			  </div>
 <!-- 			  End Modal ProStr -->
+
+	<!-- 			    The Modal  ProStr -->
+		  <div class="modal fade " id="procedure1">
+		    <div class="modal-dialog modal-xl" >
+			      <div class="modal-content">
+<!-- 		        Modal Header -->
+			        <div class="modal-header">
+		          <h4 class="modal-title"><center></center></h4>
+			          <button type="button" class="close" data-dismiss="modal">&times;</button>
+			        </div>
+<!-- 		        Modal body -->
+			        <div class="modal-body" id="proBody">
+		
+			        </div>
+<!-- 			        Modal footer -->
+			        <div class="modal-footer">
+		             <button type="button" class="btn btn-danger" data-dismiss="modal" >OK</button>
+			        </div>
+			      </div>
+			    </div>
+			  </div>
+<!-- 			  End Modal ProStr -->     
+
+<!-- 			  End Modal ProStr -->
+	   	     <!-- 			    The Modal  ProStr -->
+		  <div class="modal fade " id="tagDetail">
+		    <div class="modal-dialog modal-md" >
+			      <div class="modal-content">
+<!-- 		        Modal Header -->
+			        <div class="modal-header">
+		          <h4 class="modal-title"><center id="modalTitle"></center></h4>
+			          <button type="button" class="close" data-dismiss="modal">&times;</button>
+			        </div>
+<!-- 		        Modal body -->
+			        <div class="modal-body" id="tagBody">
+		
+			        </div>
+<!-- 			        Modal footer -->
+			        <div class="modal-footer">
+<!-- 		             <button type="button" class="btn btn-danger" data-dismiss="modal" >Ok</button> -->
+			        </div>
+			      </div>
+			    </div>
+			  </div>
+<!-- 			  End Modal ProStr -->  
 	     
  	</div>
  	 
@@ -96,38 +159,40 @@ Copyrights &copy; COEPTECH - Virtual Labs
   
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script type="text/javascript" src="js/toastr.min.js"></script>
 <!-- <script src="src/landingPage.js"></script> -->
 <script src="src/popupData.js"></script>
 <script src="src/stdJson.js"></script>
 <script src="src/questionJson.js"></script>
+<script>
+toastr.options = {
+        'closeButton': true,
+        'debug': false,
+        'newestOnTop': false,
+        'progressBar': false,
+        'positionClass': 'toast-bottom-right',
+        'preventDuplicates': false,
+        'showDuration': '1000',
+        'hideDuration': '1000',
+        'timeOut': '5000',
+        'extendedTimeOut': '1000',
+        'showEasing': 'swing',
+        'hideEasing': 'linear',
+        'showMethod': 'fadeIn',
+        'hideMethod': 'fadeOut',
+        'margin-bottom':'50%'
+    }
 
-<!-- <!-- sensor 1- Flow sensor --> 
-<!-- <script src="src/flowSensor/flowSensorPiping.js"></script> -->
-<!-- <script src="src/flowSensor/flowSensorInstrument.js"></script> -->
-<!-- <script src="src/flowSensor/flowSensorPreQuestion.js"></script> -->
-<!-- <script src="src/flowSensor/flowSensorMimic.js"></script> -->
-<!-- <script src="src/flowSensor/flowSensorPostQuestion.js"></script> -->
-
-<!-- sensor 2- level sensor -->
-<!-- <script src="src/levelSensorPiping.js"></script> -->
-<!-- <script src="src/levelSensorInstrument.js"></script> -->
-<!-- <script src="src/levelSensorPreQuestion.js"></script> -->
-<!-- <script src="src/levelSensorMimic.js"></script> -->
-<!-- <script src="src/levelSensorPostQuestion.js"></script> -->
+</script>
 
 <!-- <!-- sensor 3- Temperature sensor --> 
 <script src="src/TemperatureSensorPiping.js"></script>
 <script src="src/TemperatureSensorInstrument.js"></script>
-<script src="src/TemperatureSensorPreQuestion.js"></script>
+<script src="src/TempratureSensorSquActivities.js"></script>
 <script src="src/TemperatureSensorMimic.js"></script>
 <script src="src/TemperatureSensorPostQuestion.js"></script>
-
-<!-- <!-- sensor 4- pressureVacuum sensor --> 
-<!-- <script src="src/pressureVacuumSensor/pressureVacuumSensorPiping.js"></script> -->
-<!-- <script src="src/pressureVacuumSensor/pressureVacuumSensorInstrument.js"></script> -->
-<!-- <script src="src/pressureVacuumSensor/pressureVacuumPreQuestion.js"></script> -->
-<!-- <script src="src/pressureVacuumSensor/pressureVacuumSensorMimic.js"></script> -->
-<!-- <script src="src/pressureVacuumSensor/pressureVacuumPostQuestion.js"></script> -->
+<script src="js/toastr.min.js"></script>
+<script src="src/timer.js"></script>
 
 <script>
 $( document ).ready(function() {
