@@ -23,7 +23,7 @@ var pump;
 var chiller;
 
 //var wt;
-	$("#Header").html("	<center><span>TEMPERATURE SENSOR - VESSEL & PIPING DIAGRAM</span></center>");
+	$("#Header").html("	<center><span>TEMPERATURE SENSOR - PIPING DIAGRAM</span></center>");
 	htm=''
 		+'<div class="row titlePart"  style="border-style: unset;padding:7px;">'
 		+'<center><span >CONFIGURATION</span></center>'
@@ -242,7 +242,7 @@ var chiller;
 							+'</div>'
 							+'</div>'
 
-						+"<img src='images/Temp_Sensor.png' class='img-fluid' style='border-style: double;border-color: black;'>"
+						+"<img src='images/temp_piping_1.png' class='img-fluid' style='border-style: double;border-color: black;'>"
 					  
 						 $("#modelBody").html(htm);
 						  $("#modelBody").css("color","red");   
@@ -294,7 +294,7 @@ var chiller;
 					addToMasterJson();
 					htm=''
 						+'<div class="col-sm-12" >'
-						+"<img src='images/Temp_Sensor.png' class='img-fluid' id='partA1' style=' width: 100px;height:100px;position: relative; margin: 20px;'  >"
+						+"<img src='images/temp_piping_1.png' class='img-fluid' id='partA1' style=' width: 100px;height:100px;position: relative; margin: 20px;'  >"
 						+'</div>'
 						
 					$("#diagram").html(htm);

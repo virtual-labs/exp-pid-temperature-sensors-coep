@@ -1,3 +1,4 @@
+$("#simDemo").click(function () {
 
 	 $("#modelDialog").removeClass("modal-md");
 	 $("#modelDialog").addClass("modal-xl");
@@ -21,8 +22,62 @@
 		+'<br><span class="subTitle">Powder Recovery and Collection System:</span><br> Cyclones, filters, and receivers used to capture dried particles from the exhaust gas.'
 		+'<br><span class="subTitle">Exhaust Gas Handling System:</span><br> Includes fans, scrubbers, and filtration units to ensure environmental compliance.'
 		+'<br><span class="subTitle">Cooling/Storage: </span><br>Systems for cooling, storing, and packaging the dried product</p></div>'
-		
-	$("#proStrBody").html(htm);
-//	htm=''
-//		+' Simulation Demo'
-//	$("#SimulationDemoBody").html(htm);
+		$("#proStrBody").html(htm);
+			
+		});
+	$("#procedure").click(function () {
+				 $("#modelDialog").removeClass("modal-xl");
+				 $("#modelDialog").addClass("modal-md");
+				htm=''
+					+' '
+				$("#proBody").html(htm);
+			});
+			$("#tagDetails").click(function () {
+				 $("#modelDialog").removeClass("modal-xl");
+				 $("#modelDialog").addClass("modal-md");
+				htm=''
+					+'<table class="table table-bordered table-hover" style="font-size:larger;">'
+					+' <thead>'
+					+'<tr class="table-info">'
+					+'<th>Tag</th>'
+					+'<th>Tag Details</th>'
+					+'</tr>'
+					+'</thead>'
+					+' <tbody>'
+					+'<tr>'
+					+'<td>TT1</td>'
+					+'<td>PT - 100 Bare Temperature Sensor</td>'
+					+'</tr>'
+					+'<tr>'
+					+'<td>TT2</td>'
+					+'<td>PT - 100 Sheath Temperature Sensor</td>'
+					+'</tr>'
+					+'<tr>'
+					+'<td>TT3</td>'
+					+'<td>PT - 100 Thermowell Temperature Sensor</td>'
+					+'</tr>'
+					+'<tr>'
+					+'<td>TT4</td>'
+					+'<td>K - Type Bare Temperature Sensor</td>'
+					+'</tr>'
+					+'<tr>'
+					+'<td>TT5</td>'
+					+'<td>K - Type Sheath Temperature Sensor</td>'
+					+'</tr>'
+					+'<tr>'
+					+'<td>TT6</td>'
+					+'<td>K - Type Thermowell Temperature Sensor</td>'
+					+'</tr>'
+					+'<tr>'
+					+'<td>TT7 </td>'
+					+'<td>PT - 100 Bare Temperature Sensor</td>'
+					+'</tr>'
+					+'<tr>'
+					+'<td>TT8</td>'
+					+'<td>PT - 100 Bare Temperature Sensor</td>'
+					+'</tr>'
+				
+					+'</tbody>'
+					+'</table>'
+				$("#tagBody").html(htm);
+			});
