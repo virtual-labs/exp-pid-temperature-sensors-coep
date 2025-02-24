@@ -1,35 +1,75 @@
 $("#simDemo").click(function () {
 
-	 $("#modelDialog").removeClass("modal-md");
-	 $("#modelDialog").addClass("modal-xl");
-	htm=''
-		+'<div class="row statement" ><p>The spray drying process is a widely used technique for converting liquid feed into a dry powder form by rapidly drying with a hot gas.'
-		+'This method is commonly used in industries such as food processing, pharmaceuticals, chemicals, and ceramics. The objective'
-		+'of this task is to develop a comprehensive Piping and Instrumentation Diagram (P&ID) for a Spray Drying Process Plant that '
-		+'outlines the necessary equipment, instrumentation, control loops, and piping systems.'
-		+'<br><b> Problem Description</b><br>'
-		+'The spray drying process involves several critical stages such as atomization, drying, powder collection, and gas handling.'
-		+'A well-designed P&ID is required to ensure optimal control, safety, and efficient operation of the plant. The diagram should '
-		+'incorporate the flow of materials, energy, and signals, highlighting all relevant equipment such as pumps, compressors,'
-		+'heat exchangers, filters, and storage vessels, along with the associated instrumentation for monitoring and control.</p>'
-		
-		+'<br><b style="margin-bottom:10px;">The P&ID should include all major and minor process components and systems such as:</b><br>'
+			 $("#modelDialog").removeClass("modal-md");
+			 $("#modelDialog").addClass("modal-xl");
+			htm=''
+				htm=''
+					+'<div class="row" >'
+					+'<div class="container main-container">'
+					+' <h5 class="text-center" style="color: #f8f9fa;background-color: #343a40;padding-bottom:10px;padding-top:10px">PROBLEM STATEMENT</h5>'
+					+'<ul class="nav nav-tabs" id="tabMenu" role="tablist">'
+					+'  <li class="nav-item">'
+					+'    <button class="nav-link active" id="customer-tab1" data-bs-toggle="tab" data-bs-target="#customer1" type="button" role="tab" aria-controls="customer1" aria-selected="true">Customer Requirements</button>'
+					+'  </li>'
+					+'  <li class="nav-item">'
+					+'    <button class="nav-link" id="operation-tab1" data-bs-toggle="tab" data-bs-target="#operation1" type="button" role="tab" aria-controls="operation1" aria-selected="false">Operational Requirements</button>'
+					+'  </li>'
+					+' </ul>'
+					+' <div class="tab-content mt-3" id="tabContent">'
+//					+'   <!-- Customer Requirements -->'
+					+'<div class="tab-pane fade show active" id="customer1" role="tabpanel" aria-labelledby="customer-tab1">'
+//					+'    <h2 class="tab-title">Customer Requirements</h2>'
+					+'<b style="font-size:18px;">Customer Requirements: (Design and development of Temperature sensor calibration facility)</b><br>'
+					+'   <p style="    font-size: 18px;">The customer intends to set-up a temperature calibration facility which will test temperature sensors of following'
+					+' types as minimum requirement. For all the sensors the process connection will be either ½” NPT F) OR flange based. The temperature range will be from -40°C to 800°C.</p>'
+					+'<br>'
+					+'    <ul class="list-group">'
+					+'     <li class="list-group-item">1. RTD with and without thermowell</li>'
+		+'     <li class="list-group-item">2. Thermocouple with and without thermowell</li>'
+		+'     <li class="list-group-item">3. Thermister</li>'
+		+'     <li class="list-group-item">4. Thermostat</li>'
+		+'     <li class="list-group-item">5. Filled in thermometer (Gas, Liquid and Metal filled)</li>'
+		+'     <li class="list-group-item">6. Semiconductor based IC sensors AND </li>'
+		+'     <li class="list-group-item">7. provision for any other type of temperature sensor which fits in this category</li>'
+					+'   </ul>'
+					+' </div>'
+					
+//					+' <!-- Operational Requirements -->'
+					+'  <div class="tab-pane fade" id="operation1" role="tabpanel" aria-labelledby="operation-tab1">'
+//					+'   <h2 class="tab-title">Operational Requirements</h2>'
+					+'   <ul class="list-group">'
+					+'     <li class="list-group-item">1.	Minimum energy is to be used for testing of the sensors</li>'
+		+'     <li class="list-group-item">2.	The entire process of characterizing of sensor must be fully automated</li>'
+		+'     <li class="list-group-item">3.	In case of power failure the set-up should continue from the current reading</li>'
+		+'     <li class="list-group-item">4.	A provision must be made to reduce the heating/cooling turbulence</li>'
+		+'     <li class="list-group-item">5.	Multi point characterizing (Calibration) must be provide, the points will be selected by the customer</li>'
+		+'     <li class="list-group-item">6.	The set-up should test three sensors (minimum) at a time</li>'
+		+'     <li class="list-group-item">7.	The duration of the test should not be more than 90 minutes in view of all the characteristics</li>'
+		+'     <li class="list-group-item">8.	For dynamic characteristics a provision should be made as per demand</li>'
+		+'     <li class="list-group-item">9.	The provision is to be made to acquire health of the plant before starting any test</li>'
+		+'     <li class="list-group-item">10.	The entire analysis and report should be made automatically with validation of data, removing outliers, and having audit trail so as to secure the data.</li>'
+		+'     <li class="list-group-item">11.	test reports need to be stored for minimum one year </li>'
+		+'     <li class="list-group-item">12.	The visualization tool to be deployed for the operators</li>'
+		+'     <li class="list-group-item">13.	Role based reporting structure and dash boards to be implemented using open source software </li>'
+		+'     <li class="list-group-item">14.	The minimum level financial sustainability of the set up is to be ensured and reported as pointers of efficiency</li>'
+		+'     <li class="list-group-item">15.	The alarms and events are to be generated for critical parameters and to be shared based on role.</li>'
 
-		+'<p><span class="subTitle">Feed Preparation System:</span><br> Where liquid feed is prepared and conditioned before entering the spray dryer.'
-		+'<br><span class="subTitle">Atomization System:</span><br> Atomizers or nozzles that break the liquid feed into droplets for drying.'
-		+'<br><span class="subTitle">Drying Chamber:</span><br> A chamber where hot air or gas dries the atomized liquid into fine powder.'
-		+'<br><span class="subTitle">Air Handling System: </span><br>For controlling airflow and temperature inside the drying chamber.'
-		+'<br><span class="subTitle">Powder Recovery and Collection System:</span><br> Cyclones, filters, and receivers used to capture dried particles from the exhaust gas.'
-		+'<br><span class="subTitle">Exhaust Gas Handling System:</span><br> Includes fans, scrubbers, and filtration units to ensure environmental compliance.'
-		+'<br><span class="subTitle">Cooling/Storage: </span><br>Systems for cooling, storing, and packaging the dried product</p></div>'
-		$("#proStrBody").html(htm);
+
+					+'   </ul>'
+					+'   </div>'
+				+' </div>'
+				    +' </div>'
+					+'</div>'
+			$("#proStrBody").html(htm);
 			
 		});
+		
+		
 	$("#procedure").click(function () {
 				 $("#modelDialog").removeClass("modal-xl");
 				 $("#modelDialog").addClass("modal-md");
 				htm=''
-					+' '
+					+' Add Procedure Here'
 				$("#proBody").html(htm);
 			});
 			$("#tagDetails").click(function () {
@@ -75,6 +115,14 @@ $("#simDemo").click(function () {
 					+'<tr>'
 					+'<td>TT8</td>'
 					+'<td>PT - 100 Bare Temperature Sensor</td>'
+					+'</tr>'
+					+'<tr>'
+					+'<td>PT1 </td>'
+					+'<td>Pressure Transmitter</td>'
+					+'</tr>'
+					+'<tr>'
+					+'<td>PT2</td>'
+					+'<td>Pressure Transmitter</td>'
 					+'</tr>'
 				
 					+'</tbody>'

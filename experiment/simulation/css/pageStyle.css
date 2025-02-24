@@ -27,12 +27,12 @@ border-style: double;
 .titlePart{
 font-size: larger;
     font-weight: 700;
-    background-color: #343a40;
+    background-color: #244747;
     margin: 5px;
     padding: 15px;
     color: #fff;
     border-style: solid;
-    border-color: aqua;
+    border-color: #7baea7;
    
 }
 .subTitle{
@@ -41,7 +41,41 @@ font-size: larger;
     color: #dc3545;
 	
 }   
-
+/* mainpage Customer req */
+.main-container {
+      padding: 20px;
+      background-color: #ecf1f1;
+    }
+    .tab-content {
+      background-color: #ffffff;
+      border: 1px solid #dee2e6;
+      border-radius: 5px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .tab-title {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+    .list-group-item {
+     
+      font-size: 16px;
+    font-weight: 500;
+    }
+    .nav-item{
+        font-size: 18px;
+    color: #244747;
+    font-weight: 500;
+    }
+    
+    .nav-link{
+    color:#495057;
+    }
+  .nav-tabs .nav-link.active{
+    background-color:#c8e6ea;
+    }
+    
+    
     
      /* Custom Toastr Styles */
     .toast {
@@ -100,7 +134,7 @@ font-size: larger;
     .toast.fadeOut {
         animation: fadeOut 0.5s ease-in;
     }
-
+     
     /* FadeIn and FadeOut keyframes */
     @keyframes fadeIn {
         from {
@@ -151,3 +185,4 @@ font-size: larger;
     margin-top: 10px;
     padding: 10px;
         }
+    
