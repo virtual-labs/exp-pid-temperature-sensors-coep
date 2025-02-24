@@ -4,11 +4,11 @@ var InstrMasterJson = {};
 function TemperatureSensorInstrument()
 {
 	
-	var StdCompInstruCount=14;
+	var StdCompInstruCount=15;
 	var StdPICount=2;
 	var StdPLCCount=1;
 	var StdAFRCount=1;
-	var StdTrasmitterCount=7;
+	var StdTrasmitterCount=8;
 	var StdSCRCount=1;
 	var StdPSCount=1;
 	var StdTSCount=1;
@@ -28,7 +28,12 @@ function TemperatureSensorInstrument()
 	var ps;
 	var ts;
 	var trasmiiter;
+	var instrActualCount=0;
 	
+	timerMasterJson.piping=$("#counter").text();
+//	console.log(timerMasterJson);
+	seconds = 0;
+	  updateCounter();
 	$("#Header").html("	<center><span >TEMPERATURE SENSOR - INSTRUMENT DIAGRAM</span></center>");
 	$("#Selection").css({"overflow": "auto","height":" 837px"});
 	htm=''
@@ -60,14 +65,14 @@ function TemperatureSensorInstrument()
 		+'</div>'
 		+'<div class="col-sm-12">'
 		+'<label><b>Select no of transmitter </b></label>'
-		+' <input class="form-select" id="transmitter"  type="number" min="0" max="7" value="0" tabindex="5" ></input>'
+		+' <input class="form-select" id="transmitter"  type="number" min="0" max="8" value="0" tabindex="5" ></input>'
 		+'</div>'
 		+'<div class="col-sm-12">'
-		+'<label><b>Select no of Pressure Sensor (PS)</b></label>'
+		+'<label><b>Select no of Pressure Sensor (PSH)</b></label>'
 		+' <input class="form-select" id="ps" type="number" min="0" max="5" value="0" tabindex="6"></input>'
 		+'</div>'
 		+'<div class="col-sm-12">'
-		+'<label><b>Select no of temperature Sensor (TS)</b></label>'
+		+'<label><b>Select no of temperature Sensor (TSH)</b></label>'
 		+' <input class="form-select" id="ts" type="number" min="0" max="5" value="0" tabindex="7"></input>'
 		+'</div>'
 		
@@ -108,7 +113,7 @@ function TemperatureSensorInstrument()
 	 var totalComp1=0;
 	   var flag=0;
 	$("#verifyInstr").click(function(){
-		
+		instrActualCount++;
 		 pi=parseInt($("#pi").val());
 		 plc=parseInt($("#plc").val());
 		 afr=parseInt($("#afr").val());
@@ -154,8 +159,8 @@ function TemperatureSensorInstrument()
 						+'     <td><center>PLC</center></td>'
 						+'     <td><center>SCR</center></td>'
 						+'     <td><center>Transmitter</center></td>'
-						+'     <td><center>PS</center></td>'
-						+'     <td><center>TS</center></td>'
+						+'     <td><center>PSH</center></td>'
+						+'     <td><center>TSH</center></td>'
 						
 						+'   </tr>'
 						+'    <tr>'
@@ -163,14 +168,14 @@ function TemperatureSensorInstrument()
 						+'     <td><center>1</center></td>'
 						+'     <td><center>1</center></td>'
 						+'     <td><center>1</center></td>'
-						+'     <td><center>7</center></td>'
+						+'     <td><center>8</center></td>'
 						+'     <td><center>1</center></td>'
 						+'     <td><center>1</center></td>'
 						+'   </tr>'
 					    +' </tbody>'
 						+'</table>'
 						+'</div>'
-						+"<img src='images/Temp_instru_1.png' class='img-fluid' style='border-style: double;border-color: black;'>"
+						+"<img src='images/Temp_Instru_2.png' class='img-fluid' style='border-style: double;border-color: black;'>"
 						 $("#modelBody1").html(htm);
 						  $("#modelBody1").css("color","red"); 
 				  }
@@ -200,7 +205,7 @@ function TemperatureSensorInstrument()
 			htm=''
 				
 				+'<div class="col-sm-12" >'
-				+"<img src='images/Temp_instru_1.png' class='img-fluid' id='partB1' style=' width: 100px;height:100px;position: relative; margin: 20px;'  >"
+				+"<img src='images/Temp_Instru_2.png' class='img-fluid' id='partB1' style=' width: 100px;height:100px;position: relative; margin: 20px;'  >"
 				+'</div>'
 			  $("#diagram").html(htm);
 			  $("#partB1").animate(
@@ -215,8 +220,6 @@ function TemperatureSensorInstrument()
 				$("#nextLevel2").prop("hidden",false);
 		}
 		else{
-			
-			
 			
 			perPLCCount=parseFloat((plc*100)/StdPLCCount);
 			perAFRCount=parseFloat((afr*100)/StdAFRCount);
@@ -266,8 +269,8 @@ function TemperatureSensorInstrument()
 	function addToMasterJson()
 	{
 		tempMasterJsonInstr = {
-				"totalComp":"14",
-				"Transmitter":"7",
+				"totalComp":"15",
+				"Transmitter":"8",
 				"PLC":"1",
 				"AFR":"1",
 				"SCR":"1",
@@ -279,6 +282,8 @@ function TemperatureSensorInstrument()
 				
 		InstrMasterJson.Instrument=tempMasterJsonInstr;
 		console.log(InstrMasterJson);
+		resultJson.instrument=instrActualCount;
+		console.log(resultJson);
 	}
 	$("#nextLevel2").click(function(){
 		if(flag==1){

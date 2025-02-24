@@ -1,164 +1,259 @@
+var startCount=0;
+var datasheetCount=0;
+var trendsCount=0;
 function TemperatureSensorMimic(){
-	
-	
+	timerMasterJson.squences=$("#counter").text();
+//	console.log(timerMasterJson);
+	seconds = 0;
+	  updateCounter();
 	$("#Header").html("	<center><span >SIMULATION</span></center>");
-//	$("#diagram").html("");
-	$("#diagram").html(" <img src='images/Temp_Sensor.png' class='img-fluid' style='border-style: double;border-color: black;'>");
+	$("#diagram").html("");
 	
 	htm=''
-		
 		+'<div class="row titlePart"  style="border-style: unset;padding:7px;">'
 		+'<center><span >PROCESS MONITORING PANEL</span></center>'
 		+'</div>'
 		+'<div class="row">'
 		+'<div class="col-sm-6">'
-		+'<button id="startBtn" class="btn btn-danger" style="width:100%" data-toggle="modal" data-target="#myModal1" disabled>Start</button>'
+		+'<button id="startBtn" class="btn btn-danger" style="width:100%;margin-bottom:10px" disabled>Start</button>'
 		+'</div>'
 		+'<div class="col-sm-6">'
-//		+'<button id="reset" class="btn btn-danger" style="width:100%" disabled >Reset</button>'
+//		+'<button id="reset" class="btn btn-danger" style="width:100%;margin-bottom:10px">Reset</button>'
 		+'</div>'
 		+'</div>'
 		+'<div class="row">'
 		+'<div class="col-sm-6">'
-		+'<button id="datasheet" class="btn btn-danger" style="width:100%;margin-top:10px;" disabled>View Datasheet</button>'
+		+'<button id="datasheetBtn" class="btn btn-danger" style="width:100%;margin-bottom:10px" data-toggle="modal" data-target="#datasheetModel" disabled>View Datasheet</button>'
 		+'</div>'
 		+'<div class="col-sm-6">'
-		+'<button type="button" class="btn btn-danger"  id="graph" style="margin-top:10px;width:100%" data-toggle="modal" data-target="#modalTrends"  disabled>Trends </button>'
+		+'<button type="button" class="btn btn-danger"  id="graph" style="width:100%;margin-bottom:10px" data-toggle="modal" data-target="#modalTrends1" disabled>Trends </button>'
+	
+
+//	+'	<!-- Button to Open Modal -->'
+//	+'	<button type="button" class="btn btn-primary" id="openModal">'
+//	+'	    Open Charts Modal'
+//	+'	</button>'
+		
 		+'</div>'
+		+'</div>'
+		+'<div class="row titlePart"  style="border-style: unset;padding:7px;">'
+		+'<center><span >READINGS</span></center>'
 		+'</div>'
 		+'<div class="row conf" >'
-		
-		+'<div class="row">'
-		+'<div class="col-sm-6">'
-		+'<label><b>TT1</b></label>'
-		+'</div>'		
-		+'<div class="col-sm-3">'
-		+'<label id="tt1Value">20.00</label>'
-		+'</div>'		
-		+'<div class="col-sm-3">'
-		+'<label><b><center>°C</center></b></label>'
-		+'</div>'
-		+'</div>'
-		
-		+'<div class="row">'
-		+'<div class="col-sm-6">'
-		+'<label><b>TT2</b></label>'
-		+'</div>'		
-		+'<div class="col-sm-3">'
-		+'<label id="tt2Value">20.00</label>'
-		+'</div>'		
-		+'<div class="col-sm-3">'
-		+'<label><b>°C</b></label>'
-		+'</div>'
-		+'</div>'
-		
-		+'<div class="row">'
-		+'<div class="col-sm-6">'
-		+'<label><b>TT3</b></label>'
-		+'</div>'		
-		+'<div class="col-sm-3">'
-		+'<label id="tt3Value"> 20.00 </label>'
-		+'</div>'		
-		+'<div class="col-sm-3">'
-		+'<label><b>°C</b></label>'
-		+'</div>'
-		+'</div>'
-		
-		+'<div class="row">'
-		+'<div class="col-sm-6">'
-		+'<label><b>TT4 </b></label>'
-		+'</div>'		
-		+'<div class="col-sm-3">'
-		+'<label id="tt4Value">20.00 </label>'
-		+'</div>'		
-		+'<div class="col-sm-3">'
-		+'<label><b>°C</b></label>'
-		+'</div>'
-		+'</div>'
-		
-		+'<div class="row">'
-		+'<div class="col-sm-6">'
-		+'<label><b>TT5 </b></label>'
-		+'</div>'		
-		+'<div class="col-sm-3">'
-		+'<label id="tt5Value">20.00 </label>'
-		+'</div>'		
-		+'<div class="col-sm-3">'
-		+'<label><b>°C</b></label>'
-		+'</div>'
-		+'</div>'
-		
-		+'<div class="row">'
-		+'<div class="col-sm-6">'
-		+'<label><b>TT6</b></label>'
-		+'</div>'		
-		+'<div class="col-sm-3">'
-		+'<label id="tt6Value">20.00</label>'
-		+'</div>'		
-		+'<div class="col-sm-3">'
-		+'<label><b>°C</b></label>'
-		+'</div>'
-		+'</div>'
-		
-		+'<div class="row">'
-		+'<div class="col-sm-6">'
-		+'<label><b>TT7</b></label>'
-		+'</div>'		
-		+'<div class="col-sm-3">'
-		+'<label id="tt7Value">20.00 </label>'
-		+'</div>'		
-		+'<div class="col-sm-3">'
-		+'<label><b>°C</b></label>'
-		+'</div>'
-		+'</div>'
-		
-		+'<div class="row">'
-		+'<div class="col-sm-6">'
-		+'<label><b>TT8</b></label>'
-		+'</div>'		
-		+'<div class="col-sm-3">'
-		+'<label id="tt8Value">20.00 </label>'
-		+'</div>'		
-		+'<div class="col-sm-3">'
-		+'<label><b>°C</b></label>'
-		+'</div>'
-		+'</div>'
-		
-		+'<div class="row">'
-		+'<div class="col-sm-6">'
-		+'<label><b>PT1</b></label>'
-		+'</div>'		
-		+'<div class="col-sm-3">'
-		+'<label id="pt1Value">0.00</label>'
-		+'</div>'		
-		+'<div class="col-sm-3">'
-		+'<label><b>Bar</b></label>'
-		+'</div>'
-		+'</div>'
-		
-		+'<div class="row">'
-		+'<div class="col-sm-6">'
-		+'<label><b>PT2</b></label>'
-		+'</div>'		
-		+'<div class="col-sm-3">'
-		+'<label id="pt2Value">0.00 </label>'
-		+'</div>'		
-		+'<div class="col-sm-3">'
-		+'<label><b>Bar</b></label>'
-		+'</div>'
-		+'</div>'
-		
+		+'<table class="table table-bordered">'
+		+' <thead>'
+		+'</thead>'
+		+'<tbody>'
+		+' <tr>'
+		+'   <td><label><b>TT1</b></label></td>'
+		+'   <td><label id="tt1Value" class="PMCValue">20.00</label></td>'
+		+'   <td><label class="PMCValue"><b><center>°C</center></b></label></td>'
+		+'  </tr>'
+		+'  <tr>'
+		+'   <td><label><b>TT2</b></label></td>'
+		+'   <td><label id="tt2Value" class="PMCValue">20.00</label></td>'
+		+'   <td><label class="PMCValue"><b><center>°C</center></b></label></td>'
+		+'  </tr>'
+		+'  <tr>'
+		+'   <td><label><b>TT3</b></label></td>'
+		+'   <td><label id="tt3Value" class="PMCValue">20.00</label></td>'
+		+'   <td><label class="PMCValue"><b><center>°C</center></b></label></td>'
+		+'  </tr>'
+		+'  <tr>'
+		+'   <td><label><b>TT4</b></label></td>'
+		+'   <td><label id="tt4Value" class="PMCValue">20.00</label></td>'
+		+'   <td><label class="PMCValue"><b><center>°C</center></b></label></td>'
+		+'  </tr>'
+		+'  <tr>'
+		+'   <td><label><b>TT5</b></label></td>'
+		+'   <td><label id="tt5Value" class="PMCValue">20.00</label></td>'
+		+'   <td><label class="PMCValue"><b><center>°C</center></b></label></td>'
+		+'  </tr>'
+		+'  <tr>'
+		+'   <td><label><b>TT6</b></label></td>'
+		+'   <td><label id="tt6Value" class="PMCValue">20.00</label></td>'
+		+'   <td><label class="PMCValue"><b><center>°C</center></b></label></td>'
+		+'  </tr>'
+		+'  <tr>'
+		+'   <td><label><b>TT7</b></label></td>'
+		+'   <td><label id="tt7Value" class="PMCValue">20.00</label></td>'
+		+'   <td><label class="PMCValue"><b><center>°C</center></b></label></td>'
+		+'  </tr>'
+		+'  <tr>'
+		+'   <td><label><b>TT8</b></label></td>'
+		+'   <td><label id="tt8Value" class="PMCValue">20.00</label></td>'
+		+'   <td><label class="PMCValue"><b><center>°C</center></b></label></td>'
+		+'  </tr>'
+		+'  <tr>'
+		+'   <td><label><b>PT1</b></label></td>'
+		+'   <td><label id="pt1Value" class="PMCValue">20.00</label></td>'
+		+'   <td><label class="PMCValue"><b>Bar</b></label></td>'
+		+'  </tr>'
+		+'  <tr>'
+		+'   <td><label><b>PT2</b></label></td>'
+		+'   <td><label id="pt2Value" class="PMCValue">20.00</label></td>'
+		+'   <td><label class="PMCValue"><b>Bar</b></label></td>'
+		+'  </tr>'
+		+'</tbody>'
+		+'</table>'
+
 		+'</div>'
 		
 		+'<div class="col-sm-12">'
-		+'<button type="button" class="btn btn-danger"  id="BoilerHeatExchangerPost" style="margin-top:10px;width:100%" >Next level </button>'
+		+'<button type="button" class="btn btn-danger"  id="btnResult" style="margin-bottom:50px;width:100%" disabled>Result</button>'
 		+'</div>'
+		
+		+'<div class="modal fade " id="datasheetModel">'
+		+'<div class="modal-dialog modal-xl" >'
+		+'<div class="modal-content">'
+		+'<div class="modal-header">'
+		+'<h4 class="modal-title"><center>Datasheet</center></h4>'
+		+'<button type="button" class="close" data-dismiss="modal">&times;</button>'
+		+'</div>'
+		+'<div class="modal-body" id="datasheetBody">'
+		+'</div>'
+		+'<div class="modal-footer">'
+//		+'<button type="button" class="btn btn-danger" data-dismiss="modal" >OK</button>'
+		+'</div>'
+		+'</div>'
+		+'</div>'
+		+'</div>'
+		
+		+'<div class="modal fade " id="modalTrends1">'
+		+'<div class="modal-dialog modal-xl" >'
+		+'<div class="modal-content">'
+		+'<div class="modal-header">'
+		+'<h4 class="modal-title"><center>Graph</center></h4>'
+		+'<button type="button" class="close" data-dismiss="modal">&times;</button>'
+		+'</div>'
+		+'<div class="modal-body" id="trends1">'
+		+'</div>'
+		+'<div class="modal-footer">'
+//		+'<button type="button" class="btn btn-danger" data-dismiss="modal" >OK</button>'
+		+'</div>'
+		+'</div>'
+		+'</div>'
+		+'</div>'
+//		+'<div class="modal fade" id="chartsModal" tabindex="-1" aria-labelledby="chartsModalLabel" aria-hidden="true">'
+//		+'  <div class="modal-dialog modal-lg">'
+//		+'    <div class="modal-content">'
+//		+'         <div class="modal-header">'
+//		+'             <h5 class="modal-title" id="chartsModalLabel">Dynamic Charts</h5>'
+//		+'             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>'
+//		+'         </div>'
+//		+'         <div class="modal-body" id="chartsContainer">'
+//		+'             <!-- Chart containers will be added dynamically here -->'
+//		+'         </div>'
+//		+'     </div>'
+//		+'  </div>'
+//		+'</div>'
+
 	$("#Selection").html(htm);
+	$("#graph").click(function(){
+		trendsCount++;
+		$("#trends1").empty("");
+		var htm=''
+		
+	for(var i=0;i<dataArr.length;i++){
+		htm+='<div class="Container-fluid">'
+//		htm+='<h4>Test Cycle - '+(i+1)
+			var rowStr='RowDiv'+(i+1)
+		  htm+="<div class='row' id='"+rowStr+"'>"
+			
+			var GraphData='sensorGraphCold'+i;
+		    htm+="<div class='col-sm-12' id="+GraphData+">"
+			+'</div>'	
+		 
+		//For Hot Readings
+		
+			var GraphData='sensorGraphHot'+i;
+			htm+="<div class='col-sm-12' id="+GraphData+">"
+			+'</div>'
+			+'<div class="col-sm-12">'
+			+'<button id="GraphDataButton'+(i+1)+'" class="btn btn-danger" style="margin-bottom:10px;float:right;" hidden>Download test Cycle report - '+(i+1)+'</button>'
+			+'</div>'
+			+'</div>'
+			htm+='</div>'
+		$("#trends1").append(htm);
+			tempratureSensorGraphCold(dataArr[i],i);
+		tempratureSensorGraphHot(dataArr[i],i);
+		 var count=parseInt(i+1);
+			$('#GraphDataButton'+count).on('click', function() {
+				console.log("Clickiuyrotigjdfoigj");
+//				$('#saveAsJpg').prop("hidden",true);
+				
+			    html2canvas(document.querySelector('#RowDiv'+count)).then(canvas => {
+			        // Append the screenshot canvas to the body
+			        document.body.appendChild(canvas);
+			        $("canvas").css("display","none");
+			        // Optionally save the screenshot as an image
+			        var link = document.createElement('a');
+			        link.download = 'Density_report.png';
+			        link.href = canvas.toDataURL();
+			        link.click();
+			    });
+			});
+	}	
 	
-	$("#BoilerHeatExchangerPost").click(function(){
+		 
+//	$(document).ready(function () {
+//        $('#GraphDataButton'+(i+1)).on('click', function () {
+//        	console.log("Clickiuyrotigjdfoigj");
+//            html2canvas(document.querySelector('#RowDiv'+count)).then(canvas => {
+//                var imgData = canvas.toDataURL("image/png");
+//                $('#screenshotImg').attr('src', imgData);
+//                $('#downloadBtn').show().off('click').on('click', function() {
+//                    var a = document.createElement('a');
+//                    a.href = imgData;
+//                    a.download = 'screenshot.png';
+//                    a.click();
+//                });
+//            });
+//        });
+//    });
+		    
+	});
+	
+//	$("#openModal").click(function() {
+//		for(var i=0;i<dataArr.length;i++){
+//			var htm='<div class="row">'
+//				for(var j=0;j<dataArr[i].coldReading.length;j++){
+//					htm+="<div class='col=sm-12' id='sensorGraph'>"
+//				tempratureSensorGraph(dataArr[i],i,j);
+//				htm+='</div>'
+//				}
+//			htm+='</div>'
+//				
+//			
+//		}
+//		$("#trends1").html(htm);
+//		
+//	});
+	
+	$("#datasheetBtn").on("click", function(){
+		 datasheetCount++;
+		Datasheet();
+	});
+	$('#download').on('click', function() {
 		
-		TemperatureSensorPostQuestion();
-		
+//		$('#saveAsJpg').prop("hidden",true);
+	    html2canvas(document.querySelector("#bodyTrends")).then(canvas => {
+	        // Append the screenshot canvas to the body
+	        document.body.appendChild(canvas);
+	        $("canvas").css("display","none");
+	        // Optionally save the screenshot as an image
+	        var link = document.createElement('a');
+	        link.download = 'FlowSensorGraph.png';
+	        link.href = canvas.toDataURL();
+	        link.click();
+	    });
+	});
+	$("#btnResult").click(function(){
+		resultJson.animationStart=startCount;
+		resultJson.datasheet=datasheetCount;
+		resultJson.trends=trendsCount;
+//		console.log(resultJson);
+		result();
 	});
 	animateTempSensor();
 	
@@ -185,7 +280,7 @@ var h = 700;
 
 	paper.clear();
 	var x = 150, y = 40;
-	var time = 2000;
+	var time = 50;
 	var txtColor = "#00cc88"; 
 	var setupColor = "#abc";
 	var coldColor = "#add8e6";
@@ -228,7 +323,7 @@ var h = 700;
 	var shOn = paper.image("images/green.png", (x + 45), (y + 105), 40, 40);
 	var shOff = paper.image("images/red.png", (x +45), (y + 105), 40, 40);
 	
-	paper.rect((x-130),(y+147),230,185,5);
+	paper.rect((x-130),(y+142),230,185,5);
 	paper.text((x-70), (y+155), "TT1").attr({'font-size':15,'font-weight':'bold'});		
 	rectTextBoxes(x-105,y+170); 	
 	var tt1Text = paper.text((x-70), (y+184), "000.00").attr({"font-size":18,"font-family":"digital-clock-font","fill":txtColor,"font-weight":"bold"});
@@ -392,10 +487,11 @@ var h = 700;
 	
 	
 	$("#startBtn").on("click", function () {
+		startCount++;
 		a = [];
 		data = {};
-		
-		$("#datasheet").prop("disabled", true);
+		$("#startBtn,#btnResult").prop("disabled", true);
+		$("#datasheetBtn").prop("disabled", true);
 		$("#graph").prop("disabled", true);
 		sensorSet.animate({ transform: "T0,85"}, time*4, "ease-in-out");
 		stOff.toFront();
@@ -692,9 +788,9 @@ var h = 700;
 //							$("#tt8Value").text("20.00");
 							$("#pt1Value").text("0.00");
 							$("#pt2Value").text("0.00");
-
-							$("#datasheet").prop("disabled", false);
-							$("#graph").prop("disabled", false);
+							activeTimeouts.push(setTimeout(() =>{
+								$("#datasheetBtn,#graph,#startBtn,#btnResult").prop("disabled", false);
+							}, 3000));
 						}, 16000)));
 						sensorSet.animate({ transform: "T500,0"}, time*4);
 						dataArr.push(data);
