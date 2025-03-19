@@ -134,6 +134,7 @@ function TemperatureSensorMimic(){
 		+'</div>'
 		+'</div>'
 		+'</div>'
+		
 //		+'<div class="modal fade" id="chartsModal" tabindex="-1" aria-labelledby="chartsModalLabel" aria-hidden="true">'
 //		+'  <div class="modal-dialog modal-lg">'
 //		+'    <div class="modal-content">'
@@ -167,32 +168,16 @@ function TemperatureSensorMimic(){
 		//For Hot Readings
 		
 			var GraphData='sensorGraphHot'+i;
+			var downloadGraphBtn='graphBtn'+i;
 			htm+="<div class='col-sm-12' id="+GraphData+">"
 			+'</div>'
-			+'<div class="col-sm-12">'
-			+'<button id="GraphDataButton'+(i+1)+'" class="btn btn-danger" style="margin-bottom:10px;float:right;" hidden>Download test Cycle report - '+(i+1)+'</button>'
-			+'</div>'
+			+"<div class='col-sm-12' id="+downloadGraphBtn+">"
 			+'</div>'
 			htm+='</div>'
 		$("#trends1").append(htm);
 			tempratureSensorGraphCold(dataArr[i],i);
 		tempratureSensorGraphHot(dataArr[i],i);
-		 var count=parseInt(i+1);
-			$('#GraphDataButton'+count).on('click', function() {
-				console.log("Clickiuyrotigjdfoigj");
-//				$('#saveAsJpg').prop("hidden",true);
-				
-			    html2canvas(document.querySelector('#RowDiv'+count)).then(canvas => {
-			        // Append the screenshot canvas to the body
-			        document.body.appendChild(canvas);
-			        $("canvas").css("display","none");
-			        // Optionally save the screenshot as an image
-			        var link = document.createElement('a');
-			        link.download = 'Density_report.png';
-			        link.href = canvas.toDataURL();
-			        link.click();
-			    });
-			});
+		
 	}	
 	
 		 
@@ -280,7 +265,7 @@ var h = 700;
 
 	paper.clear();
 	var x = 150, y = 40;
-	var time = 50;
+	var time = 1000;
 	var txtColor = "#00cc88"; 
 	var setupColor = "#abc";
 	var coldColor = "#add8e6";
