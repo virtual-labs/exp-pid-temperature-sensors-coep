@@ -1,3 +1,5 @@
+## Theory
+
 Temperature is a measure of the average heat or thermal energy of the particles in a substance. Since it is an average measurement, it does not depend on the number of particles in an object. In that sense it does not depend on the size of it. For example, the temperature of a small cup of boiling water is the same as the temperature of a large pot of boiling water. Even if the large pot is much bigger than the cup and has millions and millions more water molecules. The basic unit of temperature (T) in the International System of Units (SI) is the Kelvin (K). The commonly used other units of temperature are Degree Celsius (°C) and Degree Fahrenheit (°F).
 
 #### Electrical Resistance
@@ -8,7 +10,7 @@ R = V/I
 
 The unit of resistance is ohm (Ω).
 
-### Resistance Temperature Detector (RTD)
+#### Resistance Temperature Detector (RTD)
 
 For measurement of Temperature number of sensors are available. One of the most linear, stable, and reproducible temperature sensors is the RTD, Resistance Temperature Detector. In RTD, the output resistance changes with temperature. RTD is a positive temperature coefficient device. The resistance of the metal increases with temperature. The resistive property of the metal is called its resistivity. The resistive property defines length and cross sectional area required to fabricate an RTD of a given value. The resistance is proportional to length and inversely proportional to the cross sectional area and is given by the relationship. 
 
@@ -77,7 +79,7 @@ The temperature sensor probe is inserted at the open end of the thermowell tube.
 
 -	As we mentioned earlier, the last point of thermocouple material is known as the cold junction. The amount of output the t/c produces is determined by the difference between the hot junction and the cold junction temperatures. The cold junction temperature must be known to accurately determine the temperature. 
 
-##### Let’s look at the following examples: 
+#### Let's look at the following examples: 
 
 -	If we had a thermocouple in a heat treat furnace and wanted to know what temperature it was in that furnace, we could attach a voltmeter to the cold junction and measure the voltage. 
 -	Let’s say that the furnace is operating at 1000 deg. F. and it is 100 deg. F at the cool end of the T/C. Since we said that a T/C measures the difference between the hot and cold junctions, our formula would be: 
@@ -111,7 +113,7 @@ The temperature sensor probe is inserted at the open end of the thermowell tube.
 
 ![ *Temp_5*](images/Temp_5.jpg)
 
-#### Major Hardware: - 
+#### Major Hardware 
 
 -	Refrigerator (upto - 40 oC) 
 -	Heater (upto 800 oC) 
@@ -121,6 +123,6 @@ The temperature sensor probe is inserted at the open end of the thermowell tube.
 
 ![ *Temp_6*](images/Temp_6.jpg)
 
-#### P & ID of Temperature sensor Plant – 
+#### P & ID of Temperature sensor Plant 
 
 ![ *Temp_7*](images/Temp_7.jpg)
