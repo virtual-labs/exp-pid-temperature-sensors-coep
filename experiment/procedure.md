@@ -5,7 +5,7 @@
 - Configure all parameters for the piping diagram. In which you need to identify vessels and equipment to run the plant.
 - Click on the "Verify Components" button.
 - If all configuration parameters are correct, the "Next Level" button will be visible.
-- The button is placed below the “Verify Components” button.
+- The button is placed below the "Verify Components" button.
 - Click on the "Next Level" button to proceed.
 
 #### 2. Instrument Diagram Configuration
@@ -13,12 +13,12 @@
 - Follow the same steps as above to configure the instrument diagram, In this you will have identify the instruments required to run the plant.
 - Click on the "Verify Instruments" button.
 - If all configuration parameters are correct, the "Next Level" button will be visible.
-- The button is placed below the “Verify Components” button.
+- The button is placed below the "Verify Components" button.
 - Click on the "Next Level" button to continue.
 
 #### 3. Sequence of Activities
 
-- Read the “Prior Knowledge Assessment” statements carefully.
+- Read the "Prior Knowledge Assessment" statements carefully.
 - Enter the appropriate sequence number in the provided text box. The system will not allow you to write the duplicate numbers. Hence be careful
 - Click on the "Submit" button.
 - You have three attempts to verify whether the sequence is correct or otherwise.
