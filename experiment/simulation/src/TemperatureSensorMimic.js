@@ -36,7 +36,7 @@ function TemperatureSensorMimic(){
 		
 		+'</div>'
 		+'</div>'
-		+'<div class="row titlePart"  style="border-style: unset;padding:7px;">'
+		+ '<div class="row titlePart"  style="border-style: unset;padding:7px; margin-bottom:30px;">'
 		+'<center><span >READINGS</span></center>'
 		+'</div>'
 		+'<div class="row conf" >'
@@ -264,8 +264,8 @@ var h = 700;
 	
 
 	paper.clear();
-	var x = 150, y = 40;
-	var time = 1000;
+	var x = 150, y = 50;
+	var time = 700;
 	var txtColor = "#00cc88"; 
 	var setupColor = "#abc";
 	var coldColor = "#add8e6";
