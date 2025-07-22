@@ -31,8 +31,6 @@
 #### Online Resources:
 
 -	Omega Engineering. (n.d.). Temperature Sensors: Calibration and Troubleshooting. Retrieved from https://www.omega.com/temperature-sensors-calibration-troubleshooting
-	
--	Instrumentation, Systems, and Automation Society (ISA). (n.d.). Calibration of Temperature Sensors. Retrieved from https://www.isa.org/standards-and-publications/isa-publications/calibration-of-temperature-sensors/
 
 #### Thesis and Dissertations:
 
