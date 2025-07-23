@@ -2,7 +2,7 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "In your opinion why all the customer requirements could not be satisfied?",
+      "question": "In your opinion why all the customer requirements associated with temperature sensor calibration setup could not be satisfied?",
       "answers": {
         "a": "Poor Engineering of the project",
         "b": "Lack of undestanding of the requirements",
@@ -15,7 +15,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "Is the dynamic simulation of the process matches with the fullest extent of customer requirements?",
+      "question": "Is the dynamic simulation of the temperature sensor setup matches with the fullest extent of customer requirements?",
       "answers": {
         "a": "Yes",
         "b": "No"
@@ -25,7 +25,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "Which component of the plant will consume maximum energy?",
+      "question": "Which component of the temperature sensor calibration setup will consume maximum energy?",
       "answers": {
         "a": "Compressor",
         "b": "Heater",
@@ -37,28 +37,28 @@
       "difficulty": "beginner"
     },
 	{
-      "question": "Which method will be useful for reducing the energy consumption of the calibration facility?",
+      "question": "Which method will be useful for reducing the energy consumption of the temperature sensor calibration facility?",
       "answers": {
         "a": "By reducing the number of cycles of the experiments",
-        "b": "By maximising  the number of  sensors to be calibrated simultaneously",
-        "c": "By re-designning the entire calibration facility",
+        "b": "By re-designning the entire calibration facility",
+        "c": "By maximising  the number of  sensors to be calibrated simultaneously",
         "d": "None listed"
       },
      
-      "correctAnswer": "b",
+      "correctAnswer": "c",
       "difficulty": "beginner"
     },
 	
 	{
-      "question": "Whcich safety precaution is missing in the design of the calibration facility?",
+      "question": "Which safety precaution is missing in the design of the temperature sensor calibration facility?",
       "answers": {
         "a": "Over temperature protection",
         "b": "Over cooling of refregeration system",
         "c": "Accurate temperature for which temperature sensor is to be calibrated",
-        "d": "Short circuit protection"
+        "d": "All"
       },
      
-      "correctAnswer": "c",
+      "correctAnswer": "d",
       "difficulty": "beginner"
     }
   
