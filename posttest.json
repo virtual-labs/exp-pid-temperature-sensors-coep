@@ -1,0 +1,66 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "In your opinion why all the customer requirements associated with temperature sensor calibration setup could not be satisfied?",
+      "answers": {
+        "a": "Poor Engineering of the project",
+        "b": "Lack of undestanding of the requirements",
+        "c": "Scope is unclear",
+        "d": "Available infrastructure is inadequate"
+		
+      },
+      
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Is the dynamic simulation of the temperature sensor setup matches with the fullest extent of customer requirements?",
+      "answers": {
+        "a": "Yes",
+        "b": "No"
+      },
+     
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which component of the temperature sensor calibration setup will consume maximum energy?",
+      "answers": {
+        "a": "Compressor",
+        "b": "Heater",
+        "c": "Field Instruments",
+        "d": "Control system"
+      },
+     
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+	{
+      "question": "Which method will be useful for reducing the energy consumption of the temperature sensor calibration facility?",
+      "answers": {
+        "a": "By reducing the number of cycles of the experiments",
+        "b": "By re-designning the entire calibration facility",
+        "c": "By maximising  the number of  sensors to be calibrated simultaneously",
+        "d": "None listed"
+      },
+     
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+	
+	{
+      "question": "Which safety precaution is missing in the design of the temperature sensor calibration facility?",
+      "answers": {
+        "a": "Over temperature protection",
+        "b": "Over cooling of refregeration system",
+        "c": "Accurate temperature for which temperature sensor is to be calibrated",
+        "d": "All"
+      },
+     
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    }
+  
+  ]
+}

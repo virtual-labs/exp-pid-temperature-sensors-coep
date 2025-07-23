@@ -1,0 +1,104 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "What is the definition of calibration as regards to testing of the temperature sensor?",
+      "answers": {
+        "a": "Calibration is the process of configuring an instrument to provide a result for a sample within an acceptable range",
+        "b": "Calibration is configuring and verifying a measuring instrument's accuracy to ensure its readings match a known standard",
+        "c": "Calibration means comparing with standard device and adjusting it for accuracy within the limit",
+        "d": "All"
+      },
+      
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What should be the standard operating region of the temperature sensors used in any industry?",
+      "answers": {
+        "a": "20% to 80%",
+        "b": "30% to 70%",
+        "c": "0% to 100%",
+        "d": "10% to 90%"
+		
+      },
+     
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+	{
+      "question": "On what basis the temperature sensors are selected for specific application in an industry?",
+      "answers": {
+        "a": "Resolution of the sensor",
+        "b": "Accuracy and Linearity in the operating region of the sensor",
+        "c": "Cost of the sensor",
+        "d": "All"
+      },
+     
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+	
+	{
+      "question": "In which stage of the temperature calibration setup project the design strategy is freezed?",
+      "answers": {
+        "a": "At the time of Commissioing stage",
+        "b": "At the time of Errection stage",
+        "c": "At the time of proposal",
+        "d": "At the time of detailed engieering"
+      },
+     
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "For calibration of temperature sensor in your opinion which sensor will be the best as 'Standard' sensor?",
+      "answers": {
+        "a": "RTD",
+        "b": "Thermocouple",
+        "c": "Thermister",
+        "d": "Fiber optic"
+      },
+     
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What safety feature needs to be included in this temprature calibration set-up so as to avoid any accident?",
+      "answers": {
+        "a": "Necessary interlocks",
+        "b": "Emergency STOP push button",
+        "c": "Redundancy at PLC level",
+        "d": "Fail Safe operation for all components"
+		
+      },
+     
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+	{
+      "question": "Will there be any effect of installation of temperature sensor in the system as regards to accuracy of the readings?",
+      "answers": {
+        "a": "Yes",
+        "b": "No"
+      },
+     
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+	
+	{
+      "question": "Will there be any change in temperature calibration set-up as regards to application for which it will be used?",
+      "answers": {
+        "a": "Yes",
+        "b": "No"
+      },
+     
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    }
+  
+  
+  
+  ]
+}
